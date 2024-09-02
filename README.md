@@ -1,6 +1,6 @@
 Node.js Authentication and User Management API
 Description
-This is a Node.js application providing authentication and user management functionalities. The app uses Express.js for routing, Sequelize ORM for MySQL database interaction, and SendGrid for email notifications. It includes endpoints for user registration, login, password reset, and profile management, along with admin functionalities to fetch user details.
+This Node.js application provides robust authentication and user management functionalities. It uses Express.js for routing, Sequelize ORM for MySQL database interaction, and SendGrid for email notifications. The API includes endpoints for user registration, login, password reset, and profile management, along with admin functionalities to fetch user details.
 
 Features
 User Registration: Allows new users to register.
@@ -21,8 +21,8 @@ Clone the repository:
 
 bash
 Copy code
-git clone (https://github.com/AmeerHeiba/Node-JWT-auth-sys/)
-cd your-repository
+git clone https://github.com/AmeerHeiba/Node-JWT-auth-sys/
+cd Node-JWT-auth-sys
 Install dependencies:
 
 bash
@@ -39,9 +39,7 @@ MONGO_URI=your_mongodb_uri
 SENDGRID_API_KEY=your_sendgrid_api_key
 SENDGRID_SENDER_EMAIL=your_sender_email
 SALT_ROUNDS=10
-Run database migrations:
-
-Ensure that your database is properly configured and migrate any required schemas.
+Run database migrations: Ensure that your database is properly configured and migrate any required schemas.
 
 Start the server:
 
@@ -51,15 +49,12 @@ npm start
 API Endpoints
 Authentication
 POST /auth/register
-
 Registers a new user. Requires fullName, email, and password in the request body.
 
 POST /auth/login
-
 Logs in a user and provides a JWT token. Requires email and password in the request body.
 
 POST /auth/request-password-reset
-
 Requests a password reset. Requires email in the request body.
 
 POST /auth/reset-password/
@@ -68,18 +63,14 @@ Resets the password using the provided token. Requires password in the request b
 
 User
 GET /user/profile
-
 Retrieves the profile of the currently authenticated user. Requires a valid JWT token in the Authorization header.
 
 POST /user/profile
-
 Updates the profile of the currently authenticated user. Requires a valid JWT token in the Authorization header and profile data in the request body.
 
 Admin
 GET /admin/fetch-users
-
 Fetches all users. Requires a valid JWT token with admin role in the Authorization header.
-
 Middleware
 Authentication Middleware: Verifies JWT tokens for protected routes.
 Authorization Middleware: Ensures users have the required role to access certain routes.
