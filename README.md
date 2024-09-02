@@ -21,7 +21,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/your-repository.git
+git clone (https://github.com/AmeerHeiba/Node-JWT-auth-sys/)
 cd your-repository
 Install dependencies:
 
